@@ -37,6 +37,9 @@ Visual Studio Code를 사용하여 텍스트 분석 앱을 개발합니다. 앱�
 1. Visual Studio Code 시작
 2. 팔레트를 열고(Shift+Ctrl+P) **Git: Clone** 명령을 실행하여 `https://github.com/MicrosoftLearning/mslearn-ai-language` 리포지토리를 로컬 폴더(아무 폴더나 관계없음)에 복제합니다.
 3. 리포지토리가 복제되면 Visual Studio Code에서 폴더를 엽니다.
+
+    > **참고**: Visual Studio Code에서 열려는 코드를 신뢰하라는 팝업 메시지가 표시되면 팝업에서 **예, 작성자를 신뢰합니다.** 옵션을 클릭합니다.
+
 4. 리포지토리의 C# 코드 프로젝트를 지원하는 추가 파일이 설치되는 동안 기다립니다.
 
     > **참고**: 빌드 및 디버깅에 필요한 자산을 추가하라는 메시지가 표시되면 **나중에**를 선택합니다.
@@ -45,8 +48,8 @@ Visual Studio Code를 사용하여 텍스트 분석 앱을 개발합니다. 앱�
 
 C# 및 Python용 애플리케이션과 요약을 테스트하는 데 사용할 샘플 텍스트 파일이 제공되었습니다. 두 앱 모두 동일한 기능을 제공합니다. 먼저, Azure AI 언어 리소스를 사용할 수 있도록 애플리케이션의 일부 주요 부분을 완료합니다.
 
-1. Visual Studio Code의 **탐색기** 창에서 **Labfiles/01-analyze-text** 폴더를 찾아 언어 선택에 따라 **CSharp** 또는 **Python** 폴더를 확장하고, 포함되어 있는 **text-analytics** 폴더를 확장합니다. 각 폴더에는 Azure AI 언어 텍스트 분석 기능을 통합할 앱에 대한 언어별 파일이 포함되어 있습니다.
-2. 코드 파일이 포함된 **text-analytics** 폴더를 마우스 오른쪽 단추로 클릭하고 통합 터미널을 엽니다. 그런 다음, 언어 선택에 적절한 명령을 실행하여 Azure AI 언어 Text Analytics SDK 패키지를 설치합니다. Python 연습을 위해 `dotenv` 패키지도 설치합니다.
+1. Visual Studio Code의 **탐색기** 창에서 **Labfiles/01-analyze-text** 폴더를 찾아 언어 기본 설정과 포함된 **text-analysis** 폴더에 따라 **CSharp** 또는 **Python** 폴더를 확장합니다. 각 폴더에는 Azure AI 언어 텍스트 분석 기능을 통합할 앱에 대한 언어별 파일이 포함되어 있습니다.
+2. 코드 파일이 포함된 **text-analysis** 폴더를 마우스 오른쪽 단추로 클릭하고 통합 터미널을 엽니다. 그런 다음, 언어 선택에 적절한 명령을 실행하여 Azure AI 언어 Text Analytics SDK 패키지를 설치합니다. Python 연습을 위해 `dotenv` 패키지도 설치합니다.
 
     **C#:**
 
@@ -61,7 +64,7 @@ C# 및 Python용 애플리케이션과 요약을 테스트하는 데 사용할 �
     pip install python-dotenv
     ```
 
-3. **탐색기** 창의 **text-analytics** 폴더에서 기본 설정 언어에 대한 구성 파일을 엽니다.
+3. **탐색기** 창의 **text-analysis** 폴더에서 기본 설정 언어에 대한 구성 파일을 엽니다.
 
     - **C#**: appsettings.json
     - **Python**: .env
