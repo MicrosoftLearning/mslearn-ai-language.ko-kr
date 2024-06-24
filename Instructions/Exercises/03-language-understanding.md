@@ -119,7 +119,7 @@ lab:
 
 1. **모델 성능** 페이지를 선택한 다음 **클록** 모델을 선택합니다. 전체 및 의도별 평가 메트릭(정밀도, 재현율, F1 점수)과 학습 시 수행된 평가에서 생성된 혼동 행렬을 검토합니다(샘플 발화 수가 적기 때문에 일부 의도가 결과에 포함되지 않을 수 있음).********
 
-    > **참고** 평가 메트릭에 대해 자세히 알아보려면 [설명서](/azure/ai-services/language-service/conversational-language-understanding/concepts/evaluation-metrics)를 참조하세요.
+    > **참고** 평가 메트릭에 대해 자세히 알아보려면 [설명서](https://learn.microsoft.com/azure/ai-services/language-service/conversational-language-understanding/concepts/evaluation-metrics)를 참조하세요.
 
 1. **모델 배포** 페이지로 이동한 다음 **배포 추가**를 선택합니다.
 
