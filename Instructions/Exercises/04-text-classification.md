@@ -82,6 +82,8 @@ Azure AI 언어 서비스 및 스토리지 계정을 만든 후에는 나중에 
 1. **아니요, 이 프로젝트의 일부로 파일에 레이블을 지정해야 합니다** 옵션을 선택합니다. 그런 후 **다음**을 선택합니다.
 1. **프로젝트 만들기**를 선택합니다.
 
+> **팁**: 이 작업을 수행할 권한이 없다는 오류가 발생하면 역할 할당을 추가해야 합니다. 이 문제를 해결하려면 랩을 실행하는 사용자의 스토리지 계정에 "Storage Blob 데이터 기여자" 역할을 추가합니다. 자세한 내용은 [설명서](https://learn.microsoft.com/azure/ai-services/language-service/custom-named-entity-recognition/how-to/create-project?tabs=portal%2Clanguage-studio#enable-identity-management-for-your-resource)를 참조하세요.
+
 ## 데이터에 레이블 지정
 
 이제 프로젝트를 만들었으므로 데이터에 레이블을 지정하여 텍스트 분류 방법을 모델에 학습시켜야 합니다.
