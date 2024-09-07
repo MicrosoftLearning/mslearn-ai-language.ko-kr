@@ -80,6 +80,8 @@ Azure AI 언어 서비스 및 스토리지 계정을 만든 후에는 나중에 
         - **Blob 저장소 컨테이너**: 분류 항목
         - **파일 레이블이 클래스로 지정되어 있지 않은가요?**: 네, 파일 레이블을 이 프로젝트의 일부로 지정해야 합니다.
 
+> **팁**: 이 작업을 수행할 권한이 없다는 오류가 발생하면 역할 할당을 추가해야 합니다. 이 문제를 해결하려면 랩을 실행하는 사용자의 스토리지 계정에 "Storage Blob 데이터 기여자" 역할을 추가합니다. 자세한 내용은 [설명서](https://learn.microsoft.com/azure/ai-services/language-service/custom-named-entity-recognition/how-to/create-project?tabs=portal%2Clanguage-studio#enable-identity-management-for-your-resource)를 참조하세요.
+
 ## 데이터에 레이블 지정
 
 이제 프로젝트를 만들었으므로 데이터에 레이블을 지정하여 엔터티 식별 방법을 모델에 학습시켜야 합니다.
