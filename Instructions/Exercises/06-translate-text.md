@@ -3,6 +3,7 @@ lab:
   title: 텍스트 번역
   module: Module 3 - Getting Started with Natural Language Processing
 ---
+{% assign site.title = page.lab.title %}
 
 # 텍스트 번역
 
