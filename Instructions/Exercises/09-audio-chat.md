@@ -6,7 +6,7 @@ lab:
 
 # 오디오 지원 채팅 앱 개발
 
-이 연습에서는 *Phi-4-multimodal-instruct* 생성형 AI 모델을 사용하여 오디오 파일을 포함하는 프롬프트에 대한 응답을 생성합니다. Azure AI 파운드리 및 Azure AI 모델 추론 서비스를 사용하여 식료품점에서 신선 식품으로 AI 지원을 제공하는 앱을 개발합니다.
+이 연습에서는 *Phi-4-multimodal-instruct* 생성형 AI 모델을 사용하여 오디오 파일을 포함하는 프롬프트에 대한 응답을 생성합니다. 고객이 남긴 음성 메시지를 요약하는 Azure AI 파운드리 및 Azure AI 모델 추론 서비스를 사용하여 농산물 공급업체에 AI 지원을 제공하는 앱을 개발합니다.
 
 이 연습에는 약 **30**분이 소요됩니다.
 
@@ -95,13 +95,13 @@ lab:
     **Python**
 
     ```
-    cd mslearn-ai-audio/Labfiles/09-audio-chat/python
+    cd mslearn-ai-audio/Labfiles/09-audio-chat/Python
     ```
 
     **C#**
 
     ```
-    cd mslearn-ai-audio/Labfiles/09-audio-chat/c-sharp
+    cd mslearn-ai-audio/Labfiles/09-audio-chat/C-sharp
     ```
 
 1. Cloud Shell 명령줄 창에서 다음 명령을 입력하여 사용할 라이브러리를 설치합니다.
@@ -111,7 +111,7 @@ lab:
     ```
     python -m venv labenv
     ./labenv/bin/Activate.ps1
-    pip install python-dotenv azure-identity azure-ai-projects azure-ai-inference
+    pip install -r requirements.txt azure-identity azure-ai-projects azure-ai-inference
     ```
 
     **C#**
@@ -173,9 +173,6 @@ lab:
         SystemMessage,
         UserMessage,
         TextContentItem,
-        AudioContentItem,
-        InputAudio,
-        AudioContentFormat,
     )
     ```
 
@@ -230,13 +227,13 @@ lab:
 
 1. **audio-chat.py** 파일의 코드 편집기에서 루프 섹션의 **Get a response to audio input** 주석 아래에 다음 코드를 추가하여 다음 오디오가 포함된 프롬프트를 제출합니다.
 
-    <video controls src="../media/manzanas.mp4" title="사과 요청" width="150"></video>
+    <video controls src="../media/avocados.mp4" title="아보카도 요청" width="150"></video>
 
     **Python**
 
     ```python
     # Get a response to audio input
-    file_path = "https://github.com/microsoftlearning/mslearn-ai-language/raw/refs/heads/main/labfiles/09-audio-chat/data/manzanas.mp3"
+    file_path = "https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Labfiles/09-audio-chat/data/avocados.mp3"
     response = chat_client.complete(
         messages=[
             SystemMessage(system_message),
@@ -258,7 +255,7 @@ lab:
 
     ```csharp
     // Get a response to audio input
-    string audioUrl = "https://github.com/microsoftlearning/mslearn-ai-language/raw/refs/heads/main/labfiles/09-audio-chat/data/manzanas.mp3";
+    string audioUrl = "https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Labfiles/09-audio-chat/data/avocados.mp3";
     var requestOptions = new ChatCompletionsOptions()
     {
         Messages =
@@ -290,21 +287,25 @@ lab:
     dotnet run
     ```
 
-1. 메시지가 표시되면 프롬프트(`What is this customer saying in English?`)를 입력합니다.
+1. 메시지가 표시되면 프롬프트를 입력합니다. 
+
+    ```
+    Can you summarize this customer's voice message?
+    ```
 
 1. 응답을 검토합니다.
 
-### 다른 프롬프트 사용
+### 다른 오디오 파일을 사용합니다.
 
 1. 앱 코드의 코드 편집기에서 **Get a response to audio input** 주석 아래에서 이전에 추가한 코드를 찾습니다. 그런 다음 다음과 같이 코드를 수정하여 다른 오디오 파일을 선택합니다.
 
-    <video controls src="../media/caomei.mp4" title="딸기 요청" width="150"></video>
+    <video controls src="../media/fresas.mp4" title="딸기 요청" width="150"></video>
 
     **Python**
 
     ```python
     # Get a response to audio input
-    file_path = "https://github.com/microsoftlearning/mslearn-ai-language/raw/refs/heads/main/labfiles/09-audio-chat/data/caomei.mp3"
+    file_path = "https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Labfiles/09-audio-chat/data/fresas.mp3"
     response = chat_client.complete(
         messages=[
             SystemMessage(system_message),
@@ -326,7 +327,7 @@ lab:
 
     ```csharp
     // Get a response to audio input
-    string audioUrl = "https://github.com/microsoftlearning/mslearn-ai-language/raw/refs/heads/main/labfiles/09-audio-chat/data/caomei.mp3";
+    string audioUrl = "https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Labfiles/09-audio-chat/data/fresas.mp3";
     var requestOptions = new ChatCompletionsOptions()
     {
         Messages =
@@ -358,10 +359,10 @@ lab:
     dotnet run
     ```
 
-1. 메시지가 표시되면 다음 프롬프트를 입력합니다.
-
+1. 메시지가 표시되면 다음 프롬프트를 입력합니다. 
+    
     ```
-    A customer left this voice message, can you summarize it?
+    Can you summarize this customer's voice message? Is it time-sensitive?
     ```
 
 1. 응답을 검토합니다. 그런 다음 `quit`(을)를 입력하여 프로그램을 종료합니다.
