@@ -243,9 +243,17 @@ SSML(Speech Synthesis Markup Language)을 사용하면 XML 기반 형식을 통�
     
     <video controls src="https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Instructions/media/Output2.mp4" title="시간은 5:30입니다. 이 랩을 종료할 시간입니다." width="150"></video>
 
-## (선택 사항) 마이크와 스피커가 있는 경우 어떻게 해야 할까요?
+## 정리
 
-이 연습에서는 음성 입력 및 출력에 오디오 파일을 사용했습니다. 오디오 하드웨어를 사용하도록 코드를 수정하는 방법을 살펴보겠습니다.
+Azure AI 음성 탐색을 마친 경우 이 연습에서 만든 리소스를 삭제하여 불필요한 Azure 비용이 발생하지 않도록 해야 합니다.
+
+1. Azure Cloud Shell 창 닫기
+1. Azure Portal에서 이 랩에서 만든 Azure AI 음성 리소스를 찾습니다.
+1. 리소스 페이지에서 **삭제**를 선택하고 지침에 따라 리소스를 삭제합니다.
+
+## 마이크와 스피커가 있는 경우 어떻게 해야 할까요?
+
+이번 연습에 사용한 Azure Cloud Shell 환경은 오디오 하드웨어를 지원하지 않으므로 음성 명령 입력 및 출력에 오디오 파일을 사용했습니다. 사용할 수 있는 경우 오디오 하드웨어를 사용하도록 코드를 수정하는 방법을 살펴보겠습니다.
 
 ### 마이크를 사용한 음성 인식 사용
 
@@ -292,14 +300,6 @@ if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
 ```
 
 > **참고**: 시스템 기본 스피커가 기본 오디오 출력이므로 AudioConfig를 아예 생략할 수도 있습니다!
-
-## 정리
-
-Azure AI 음성 탐색을 마친 경우 이 연습에서 만든 리소스를 삭제하여 불필요한 Azure 비용이 발생하지 않도록 해야 합니다.
-
-1. Azure Cloud Shell 창 닫기
-1. Azure Portal에서 이 랩에서 만든 Azure AI 음성 리소스를 찾습니다.
-1. 리소스 페이지에서 **삭제**를 선택하고 지침에 따라 리소스를 삭제합니다.
 
 ## 자세한 정보
 

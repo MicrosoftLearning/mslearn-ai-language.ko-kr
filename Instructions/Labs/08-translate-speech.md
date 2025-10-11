@@ -227,7 +227,7 @@ Azure AI 음성 서비스 탐색을 마쳤으면 이 연습에서 만든 리소�
 
 ## 마이크와 스피커가 있는 경우 어떻게 해야 할까요?
 
-이 연습에서는 음성 입력 및 출력에 오디오 파일을 사용했습니다. 오디오 하드웨어를 사용하도록 코드를 수정하는 방법을 살펴보겠습니다.
+이번 연습에 사용한 Azure Cloud Shell 환경은 오디오 하드웨어를 지원하지 않으므로 음성 명령 입력 및 출력에 오디오 파일을 사용했습니다. 사용할 수 있는 경우 오디오 하드웨어를 사용하도록 코드를 수정하는 방법을 살펴보겠습니다.
 
 ### 마이크와 함께 음성 번역 사용
 
@@ -258,7 +258,7 @@ Azure AI 음성 서비스 탐색을 마쳤으면 이 연습에서 만든 리소�
             "hi": "hi-IN-MadhurNeural"
    }
    speech_config.speech_synthesis_voice_name = voices.get(targetLanguage)
-   audio_config_out = speech_sdk.audio.AudioConfig(use_default_speaker=True)
+   audio_config_out = speech_sdk.audio.AudioOutputConfig(use_default_speaker=True)
    speech_synthesizer = speech_sdk.SpeechSynthesizer(speech_config, audio_config_out)
    speak = speech_synthesizer.speak_text_async(translation).get()
    if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
