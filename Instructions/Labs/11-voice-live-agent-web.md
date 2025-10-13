@@ -248,7 +248,7 @@ cd src
 1. Cloud Shell에서 다음 명령을 실행하여 배포 스크립트 편집을 시작합니다.
 
     ```bash
-    cd ~/voice-live-web
+    cd ~/01-voice-live-web
     ```
     
     ```bash
