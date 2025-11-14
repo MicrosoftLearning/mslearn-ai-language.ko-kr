@@ -44,7 +44,7 @@ lab:
 
 ## 질문 답변 프로젝트 만들기
 
-Azure AI 언어 리소스에서 질문 답변에 대한 기술 자료를 만들려면 Language Studio 포털을 사용하여 질문 답변 프로젝트를 만들 수 있습니다. 여기서는 [Microsoft Learn](https://docs.microsoft.com/learn) 관련 질문과 대답이 포함된 기술 자료를 만듭니다.
+Azure AI 언어 리소스에서 질문 답변에 대한 기술 자료를 만들려면 Language Studio 포털을 사용하여 질문 답변 프로젝트를 만들 수 있습니다. 여기서는 [Microsoft Learn](https://learn.microsoft.com/training/) 관련 질문과 대답이 포함된 기술 자료를 만듭니다.
 
 1. 새 브라우저 탭에서 [https://language.cognitive.azure.com/](https://language.cognitive.azure.com/)의 Language Studio 포털로 이동하고 Azure 구독과 연결된 Microsoft 계정을 사용하여 로그인합니다.
 1. 언어 리소스를 선택하라는 메시지가 표시되면 다음 설정을 선택합니다.
@@ -75,7 +75,7 @@ Azure AI 언어 리소스에서 질문 답변에 대한 기술 자료를 만들�
 
 1. 질문 답변 프로젝트의 **원본 관리** 페이지의 **&#9547; 원본 추가** 목록에서 **URL**을 선택합니다. 그런 다음 **URL 추가** 대화 상자에서 **&#9547; URL을 추가하고** 다음 이름과 URL을 설정한 후 **모두 추가**를 선택하여 기술 자료에 추가합니다.
     - **이름**: `Learn FAQ Page`
-    - **URL**: `https://docs.microsoft.com/en-us/learn/support/faq`
+    - **URL**: `https://learn.microsoft.com/en-us/training/support/faq?pivots=general`
 1. 질문 답변 프로젝트의 **원본 관리** 페이지의 **&#9547; 원본 추가** 목록에서 **잡담**을 선택합니다. **잡담 추가** 대화 상자에서 **친절함**을 선택하고 **잡담 추가**를 선택합니다.
 
 ## 기술 자료 테스트
@@ -84,18 +84,18 @@ Azure AI 언어 리소스에서 질문 답변에 대한 기술 자료를 만들�
 
 1. Language Studio의 **LearnFAQ** 프로젝트에서 **기술 자료 편집** 페이지를 선택하여 기존 질문 및 답변 쌍을 확인합니다(일부 팁이 표시되는 경우 팁을 읽고 **확인**을 선택하여 해제하거나, **모두 건너뛰기** 선택).
 1. 기술 자료의 **질문 답변 쌍** 탭에서 **&#65291;** 을 선택하고 다음 설정으로 새 질문 답변 쌍을 만듭니다.
-    - **원본**:  `https://docs.microsoft.com/en-us/learn/support/faq`
-    - **질문**: `What are Microsoft credentials?`
-    - **응답**: `Microsoft credentials enable you to validate and prove your skills with Microsoft technologies.`
+    - **원본**:  `https://learn.microsoft.com/en-us/training/support/faq?pivots=general`
+    - **질문**: `What are the different types of modules on Microsoft Learn?`
+    - **응답**: `Microsoft Learn offers various types of training modules, including role-based learning paths, product-specific modules, and hands-on labs. Each module contains units with lessons and knowledge checks to help you learn at your own pace.`
 1. **완료**를 선택합니다.
-1. 만들어진 **Microsoft 자격 증명이란?** 질문 페이지에서 **대체 질문**을 확장합니다. 그런 다음 대체 질문 `How can I demonstrate my Microsoft technology skills?`를 추가합니다.
+1. 생성된 **Microsoft Learn 모듈 형식에는 무엇이 있나요?** 질문 페이지에서 **대체 질문**을 확장합니다. 그런 다음 대체 질문 `How are training modules organized?`를 추가합니다.
 
     사용자가 대답을 확인한 후 추가 작업으로 *멀티 턴* 대화를 작성하면 효율적인 경우도 있습니다. 그러면 사용자가 질문을 여러 번 구체화하여 필요한 대답을 확인할 수 있습니다.
 
-1. 인증 질문에 입력한 답변 아래에서 **후속 프롬프트**를 확장하고 다음 후속 프롬프트를 추가합니다.
-    - **사용자에게 프롬프트에 표시되는 텍스트**: `Learn more about credentials`.
-    - **새 쌍에 대한 링크 만들기** 탭을 선택하고 다음 텍스트를 입력합니다. `You can learn more about credentials on the [Microsoft credentials page](https://docs.microsoft.com/learn/credentials/).` 
-    - **컨텍스트 흐름에만 표시**를 선택합니다. 이 옵션을 선택하면 원래 인증 관련 질문의 후속 질문 컨텍스트에서만 대답이 반환됩니다.
+1. 모듈 유형 질문에 입력한 답변 아래에서 **후속 프롬프트**를 확장하고 다음 후속 프롬프트를 추가합니다.
+    - **사용자에게 프롬프트에 표시되는 텍스트**: `Learn more about training`.
+    - **새 쌍에 대한 링크 만들기** 탭을 선택하고 다음 텍스트를 입력합니다. `You can explore modules and learning paths on the [Microsoft Learn training page](https://learn.microsoft.com/training/).` 
+    - **컨텍스트 흐름에만 표시**를 선택합니다. 이 옵션을 선택하면 원래 모듈 유형 관련 질문의 후속 질문 컨텍스트에서만 대답이 반환됩니다.
 1. **프롬프트 추가**를 선택합니다.
 
 ## 기술 자료 학습 및 테스트
@@ -107,8 +107,8 @@ Azure AI 언어 리소스에서 질문 답변에 대한 기술 자료를 만들�
 1. 테스트 창 상단에서 **단답형 답변 포함**을 선택 해제합니다(아직 선택 해제하지 않은 경우). 그런 다음 아래쪽에 `Hello`라는 메시지를 입력합니다. 적절한 응답이 반환되어야 합니다.
 1. 테스트 창의 맨 아래에 `What is Microsoft Learn?` 메시지를 입력합니다. FAQ에서 적절한 응답이 반환되어야 합니다.
 1. `Thanks!` 메시지를 입력합니다. 적절한 잡담 응답이 반환되어야 합니다.
-1. 메시지 `Tell me about Microsoft credentials`를 입력합니다. 앞에서 작성한 대답이 반환되고 후속 프롬프트 링크가 표시되어야 합니다.
-1. **사용자 인증 정보에 대해 자세히 알아보기** 후속 링크를 선택합니다. 인증 페이지 링크가 포함된 후속 질문의 대답이 반환되어야 합니다.
+1. 메시지 `What are the different types of modules on Microsoft Learn?`를 입력합니다. 앞에서 작성한 대답이 반환되고 후속 프롬프트 링크가 표시되어야 합니다.
+1. **학습에 대해 자세히 알아보기** 후속 링크를 선택합니다. 학습 페이지에 대한 링크가 있는 후속 답변이 반환되어야 합니다.
 1. 기술 자료 테스트를 마쳤으면 테스트 창을 닫습니다.
 
 ## 기술 자료 배포
